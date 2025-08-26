@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME:-e-Commerce-Project}
+      POSTGRES_USER: ${DATABASE_USERNAME:-Mero}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-Mero123}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:

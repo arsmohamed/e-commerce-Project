@@ -26,16 +26,17 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "active": {
       "type": "boolean",
       "default": true
+    },
+    "inventory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory.inventory",
+      "mappedBy": "product"
     }
   }
 }
