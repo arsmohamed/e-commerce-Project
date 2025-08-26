@@ -18,7 +18,8 @@
     "sku": {
       "type": "uid",
       "targetField": "name",
-      "required": false
+      "required": false,
+      "unique": true
     },
     "price": {
       "type": "decimal"
