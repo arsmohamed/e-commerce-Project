@@ -1,0 +1,35 @@
+.navbar {
+  width: 100%;
+  background-color: black; /* Change this to any color you want */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Light white border */
+  margin-bottom: 5px;
+}
+
+.navbar-container {
+  max-width: 100ew;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  color: white; /* App name color */
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-link {
+  color: white; /* Link color */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-link:hover {
+  color: #a5a4a4; /* Hover color */
+}

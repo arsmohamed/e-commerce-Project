@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client/react";
-import OrdersPage from "./pages/Orders";
+import MainPage from "./pages/MainPage";
+import Navbar from "./Components/Navbar";
 import "./App.css";
 
 const client = new ApolloClient({
@@ -13,7 +14,8 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <OrdersPage />
+      <Navbar />
+      <MainPage />
     </ApolloProvider>
   );
 }

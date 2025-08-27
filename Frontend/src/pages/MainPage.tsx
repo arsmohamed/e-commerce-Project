@@ -1,6 +1,6 @@
 // src/pages/Orders.tsx
 import Product from "../Components/product";
-import "./orders.css";
+import "./MainPage.css";
 import NotHere from "../assets/NotHere.png";
 import { gql, useQuery } from "@apollo/client";
 
@@ -21,7 +21,7 @@ const Products = gql`
   }
 `;
 
-const OrdersPage = () => {
+const MainPage = () => {
   const { loading, error, data } = useQuery(Products);
 
   if (loading) return <p>Loading...</p>;
@@ -51,4 +51,4 @@ const OrdersPage = () => {
   );
 };
 
-export default OrdersPage;
+export default MainPage;
