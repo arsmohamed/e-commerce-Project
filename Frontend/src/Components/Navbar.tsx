@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -9,12 +10,12 @@ const Navbar = () => {
 
         {/* Right side: Links */}
         <div className="navbar-links">
-          <a href="/products" className="navbar-link">
+          <Link to="/products" className="navbar-link">
             Product
-          </a>
-          <a href="/orders" className="navbar-link">
+          </Link>
+          <Link to="/orders" className="navbar-link">
             Order
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
