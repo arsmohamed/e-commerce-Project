@@ -11,7 +11,7 @@ const Products = gql`
       sku
       price
       image {
-        formats
+        url
       }
       inventory {
         onHand
@@ -27,21 +27,20 @@ const OrdersPage = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  console.log(data.products[0].image.url);
-
   return (
     <div className="orders-page">
       {data.products.map((item: any, index: number) => {
-        const { name, sku, price, image } = item; // no `.attributes`
-        // pick one format (e.g. thumbnail or medium)
-        const imgUrl = image?.formats?.thumbnail?.url
-          ? `http://localhost:1337${image.formats.thumbnail.url}`
-          : NotHere; // fallback if no image
+        const { name, sku, price, image } = item;
+
+        // build full URL (Strapi only gives relative URL)
+        const imgUrl = image?.url
+          ? `http://localhost:1337${image.url}`
+          : NotHere;
 
         return (
           <Product
             key={index}
-            imgSrc={imgUrl} // you can swap this with item.image.formats?.thumbnail?.url if available
+            imgSrc={imgUrl}
             name={name}
             price={`$${price}`}
             sku={sku}
