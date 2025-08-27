@@ -9,22 +9,22 @@ export const mockProducts = [
     inventory: { onHand: 20, reserved: 5 },
     active: true,
   },
-  {
-    id: "p2",
-    name: "Mechanical Keyboard",
-    sku: "KB-002",
-    price: 70,
-    inventory: { onHand: 15, reserved: 2 },
-    active: true,
-  },
-  {
-    id: "p3",
-    name: "Noise Cancelling Headphones",
-    sku: "HP-003",
-    price: 120,
-    inventory: { onHand: 10, reserved: 0 },
-    active: true,
-  },
+  // {
+  //   id: "p2",
+  //   name: "Mechanical Keyboard",
+  //   sku: "KB-002",
+  //   price: 70,
+  //   inventory: { onHand: 15, reserved: 2 },
+  //   active: true,
+  // },
+  // {
+  //   id: "p3",
+  //   name: "Noise Cancelling Headphones",
+  //   sku: "HP-003",
+  //   price: 120,
+  //   inventory: { onHand: 10, reserved: 0 },
+  //   active: true,
+  // },
 ];
 
 export const mockOrder = {
