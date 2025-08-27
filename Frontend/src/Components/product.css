@@ -1,0 +1,120 @@
+/* Container */
+.product-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  width: 450px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  gap: 2rem;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-info {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+}
+
+.product-details {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.product-sku {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Right section */
+.Order-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* gap: 0.75rem; */
+  min-width: 150px;
+}
+
+/* Quantity control */
+.product-quantity {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-self: center;
+  border: 0.01px solid #ffffff5a;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: #444;
+}
+
+.qty-input {
+  width: 30px;
+  padding: 0.4rem;
+  border: 2px solid #1a1a1a;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Order button */
+.product-order-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.25s ease;
+}
+
+.product-order-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: scale(1.05);
+}
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

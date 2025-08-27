@@ -1,0 +1,8 @@
+.orders-page {
+  min-height: 100vh; /* full height */
+  /* display: flex; /* center content */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #5f4f4f; /* black backgound */
+  padding: 2rem;
+}
