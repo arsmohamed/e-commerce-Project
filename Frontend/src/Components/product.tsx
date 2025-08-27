@@ -6,14 +6,19 @@ type ProductProps = {
   name: string;
   price: string;
   sku: string;
+  onOrder: (sku: string, name: string, quantity: number) => void;
 };
 
-const Product = ({ imgSrc, name, price, sku }: ProductProps) => {
+const Product = ({ imgSrc, name, price, sku, onOrder }: ProductProps) => {
   // state for quantity
   const [quantity, setQuantity] = useState<number>(0);
 
   const handleIncrease = () => setQuantity((prev) => prev + 1);
   const handleDecrease = () => setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+  const handleOrder = () => {
+    onOrder(sku, name, quantity);
+    setQuantity(0); // reset after adding
+  };
 
   return (
     <div className="product-card">
@@ -37,7 +42,9 @@ const Product = ({ imgSrc, name, price, sku }: ProductProps) => {
           </button>
         </div>
 
-        <button className="product-order-btn">Order</button>
+        <button className="product-order-btn" onClick={handleOrder}>
+          Order
+        </button>
       </div>
     </div>
   );
