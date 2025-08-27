@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./product.css";
+import "./OrderContainer.css";
 
-type ProductProps = {
+type OrderContainerProps = {
   imgSrc: any;
   name: string;
   price: string;
@@ -9,7 +9,13 @@ type ProductProps = {
   onOrder: (sku: string, name: string, quantity: number) => void;
 };
 
-const Product = ({ imgSrc, name, price, sku, onOrder }: ProductProps) => {
+const OrderContainer = ({
+  imgSrc,
+  name,
+  price,
+  sku,
+  onOrder,
+}: OrderContainerProps) => {
   // state for quantity
   const [quantity, setQuantity] = useState<number>(0);
 
@@ -21,18 +27,18 @@ const Product = ({ imgSrc, name, price, sku, onOrder }: ProductProps) => {
   };
 
   return (
-    <div className="product-card">
-      <img src={imgSrc} alt={name} className="product-image" />
-      <div className="product-container">
-        <div className="product-info">
-          <p className="product-details">{name}</p>
-          <p className="product-details">{price}</p>
+    <div className="OrderContainer-card">
+      <img src={imgSrc} alt={name} className="OrderContainer-image" />
+      <div className="OrderContainer-container">
+        <div className="OrderContainer-info">
+          <p className="OrderContainer-details">{name}</p>
+          <p className="OrderContainer-details">{price}</p>
         </div>
-        <p className="product-sku">SKU: {sku}</p>
+        <p className="OrderContainer-sku">SKU: {sku}</p>
       </div>
 
       <div className="Order-Container">
-        <div className="product-quantity">
+        <div className="OrderContainer-quantity">
           <button className="qty-btn" onClick={handleDecrease}>
             -
           </button>
@@ -42,7 +48,7 @@ const Product = ({ imgSrc, name, price, sku, onOrder }: ProductProps) => {
           </button>
         </div>
 
-        <button className="product-order-btn" onClick={handleOrder}>
+        <button className="OrderContainer-order-btn" onClick={handleOrder}>
           Order
         </button>
       </div>
@@ -50,4 +56,4 @@ const Product = ({ imgSrc, name, price, sku, onOrder }: ProductProps) => {
   );
 };
 
-export default Product;
+export default OrderContainer;

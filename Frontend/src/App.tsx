@@ -1,6 +1,15 @@
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client/react";
-import OrdersPage from "./pages/Orders";
+import OrderPage from "./pages/OrderPage";
+import Navbar from "./Components/Navbar";
+import MainPage from "./pages/MainPage";
+import "aos/dist/aos.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
 
 const client = new ApolloClient({
@@ -13,7 +22,14 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <OrdersPage />
+      <Router>
+        <Navbar /> {/* ✅ Inside Router */}
+        <Routes>
+          <Route path="/" element={<Navigate to="/products" replace />} />
+          <Route path="/products" element={<MainPage />} />
+          <Route path="/orders" element={<OrderPage />} />
+        </Routes>
+      </Router>
     </ApolloProvider>
   );
 }

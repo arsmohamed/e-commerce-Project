@@ -1,0 +1,9 @@
+.orders-page {
+  /* background-color: #5f4f4f; */
+  flex-direction: row; /* row layout */
+  flex-wrap: wrap; /* allow wrapping to next line */
+  display: flex;
+  border: 0.01px solid #ffffff5a;
+  /* width: 75%; */
+  border-radius: 15px;
+}
