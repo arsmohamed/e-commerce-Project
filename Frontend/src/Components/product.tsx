@@ -2,13 +2,13 @@ import { useState } from "react";
 import "./product.css";
 
 type ProductProps = {
-  imgSrc: string;
-  title: string;
+  imgSrc: any;
+  name: string;
   price: string;
   sku: string;
 };
 
-const Product = ({ imgSrc, title, price, sku }: ProductProps) => {
+const Product = ({ imgSrc, name, price, sku }: ProductProps) => {
   // state for quantity
   const [quantity, setQuantity] = useState<number>(0);
 
@@ -17,10 +17,10 @@ const Product = ({ imgSrc, title, price, sku }: ProductProps) => {
 
   return (
     <div className="product-card">
-      <img src={imgSrc} alt={title} className="product-image" />
+      <img src={imgSrc} alt={name} className="product-image" />
       <div className="product-container">
         <div className="product-info">
-          <p className="product-details">{title}</p>
+          <p className="product-details">{name}</p>
           <p className="product-details">{price}</p>
         </div>
         <p className="product-sku">SKU: {sku}</p>

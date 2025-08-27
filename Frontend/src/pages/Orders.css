@@ -1,8 +1,10 @@
 .orders-page {
-  min-height: 100vh; /* full height */
-  /* display: flex; /* center content */
-  /* justify-content: center; */
-  /* align-items: center; */
-  background-color: #5f4f4f; /* black backgound */
-  padding: 2rem;
+  background-color: #5f4f4f; /* dark background */
+  flex-direction: row; /* row layout */
+  flex-wrap: wrap; /* allow wrapping to next line */
+  display: flex;
+  /* width: 100vw; */
+  /* justify-content: flex-start; align items left */
+  /* gap: 1rem;  */
+  /* padding: 10px; */
 }
