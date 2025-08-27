@@ -1,5 +1,6 @@
 :root {
   background-color: #000; /* black background */
+  @import "aos/dist/aos.css";
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   /* line-height: 1.5;
   font-weight: 400;

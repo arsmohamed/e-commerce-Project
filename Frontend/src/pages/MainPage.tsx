@@ -76,7 +76,7 @@ const MainPage = () => {
           />
         );
       })}
-      <div className="order-summary">
+      {/* <div className="order-summary">
         <h2>Current Order</h2>
         {order.length === 0 && <p>No products yet.</p>}
         <ul>
@@ -86,7 +86,7 @@ const MainPage = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

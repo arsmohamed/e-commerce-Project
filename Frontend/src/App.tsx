@@ -3,6 +3,7 @@ import { ApolloProvider } from "@apollo/client/react";
 import OrderPage from "./pages/OrderPage";
 import Navbar from "./Components/Navbar";
 import MainPage from "./pages/MainPage";
+import "aos/dist/aos.css";
 import {
   BrowserRouter as Router,
   Routes,
