@@ -2,7 +2,7 @@ import "./OrderPage.css";
 
 const OrdersPage = () => {
   return (
-    <div className="orders-page">
+    <div className="orders-page-style">
       <h2>Your Cart</h2>
       <p>item(s)</p>
       <p>Your Cart is empty. Add items to begin.</p>
