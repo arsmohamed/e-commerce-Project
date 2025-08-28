@@ -3,7 +3,10 @@ import { ApolloProvider } from "@apollo/client/react";
 import OrderPage from "./pages/OrderPage";
 import Navbar from "./Components/Navbar";
 import MainPage from "./pages/MainPage";
+import { useEffect } from "react";
 import "aos/dist/aos.css";
+import AOS from "aos";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,6 +23,14 @@ const client = new ApolloClient({
 });
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      easing: "ease-in-out", // easing function
+      once: true, // whether animation should happen only once while scrolling down
+    });
+  }, []);
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -27,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/products" replace />} />
           <Route path="/products" element={<MainPage />} />
-          <Route path="/orders" element={<OrderPage />} />
+          {/* <Route path="/orders" element={<OrderPage />} /> */}
         </Routes>
       </Router>
     </ApolloProvider>
