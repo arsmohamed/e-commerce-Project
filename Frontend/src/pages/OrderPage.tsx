@@ -29,7 +29,7 @@ const OrdersPage = ({ order }: OrdersPageProps) => {
         </>
       ) : (
         order.map((item) => (
-          <div key={item.sku} className="order-item-row">
+          <div data-aos="fade-left" key={item.sku} className="order-item-row">
             <img
               src={item.imgSrc}
               alt={item.name}

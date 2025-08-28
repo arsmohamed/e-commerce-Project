@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./product.css";
+import "aos/dist/aos.css";
 
 type ProductProps = {
   imgSrc: any;
@@ -21,8 +22,13 @@ const Product = ({ imgSrc, name, price, sku, onOrder }: ProductProps) => {
   };
 
   return (
-    <div className="product-card">
-      <img src={imgSrc} alt={name} className="product-image" />
+    <div className="product-card" data-aos="flip-right">
+      <img
+        src={imgSrc}
+        alt={name}
+        className="product-image"
+        data-aos="zoom-in"
+      />
       <div className="product-container">
         <div className="product-info">
           <p className="product-details">{name}</p>
