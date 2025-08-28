@@ -4,12 +4,15 @@
   align-items: flex-start;
   padding: 2rem;
   width: 35vh;
-  height: 40vh;
   border: 0.01px solid #ffffff5a;
   border-radius: 15px;
   color: white;
   box-shadow: 0 4px 12px rgba(1, 204, 255, 0.822);
   margin-right: 15px;
+
+  /* allow dynamic height */
+  max-height: 90vh; /* optional: avoid growing beyond viewport */
+  overflow-y: auto; /* scroll if content exceeds max-height */
 }
 
 .orders-page h2 {
@@ -57,4 +60,18 @@
   /* opacity: 0.9; */
   background: linear-gradient(135deg, #4338ca, #4f46e5);
   transform: scale(1.05);
+}
+/* Ordering Container */
+.order-item-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Order-item-img-container {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 15px;
 }

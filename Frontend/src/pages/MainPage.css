@@ -4,6 +4,7 @@
   flex-wrap: wrap; /* allow wrapping to next line */
   display: flex;
   border: 0.01px solid #ffffff5a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.822);
   width: 75%;
   border-radius: 15px;
   margin-left: 15px;

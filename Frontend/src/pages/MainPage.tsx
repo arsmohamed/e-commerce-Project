@@ -25,6 +25,8 @@ export type OrderItem = {
   sku: string;
   name: string;
   quantity: number;
+  price: number;
+  imgSrc: string;
 };
 
 const MainPage = () => {
