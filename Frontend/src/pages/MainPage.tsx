@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import Product from "../Components/product";
 import NotHere from "../assets/NotHere.png";
+import OrdersPage from "./OrderPage";
 import { useState } from "react";
 import "./MainPage.css";
 
@@ -20,10 +21,12 @@ const Products = gql`
     }
   }
 `;
-type OrderItem = {
+export type OrderItem = {
   sku: string;
   name: string;
   quantity: number;
+  price: number;
+  imgSrc: string;
 };
 
 const MainPage = () => {
@@ -34,28 +37,31 @@ const MainPage = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   // Handle when a product is added to order
-  const handleAddToOrder = (sku: string, name: string, quantity: number) => {
+  const handleAddToOrder = (
+    sku: string,
+    name: string,
+    quantity: number,
+    price: number,
+    imgSrc: string
+  ) => {
     if (quantity <= 0) return; // ignore 0 qty
 
-    setOrder((prevOrder) => {
-      const existing = prevOrder.find((item) => item.sku === sku);
+    setOrder((prev) => {
+      const existing = prev.find((item) => item.sku === sku);
       if (existing) {
-        // update quantity if already in order
-        return prevOrder.map((item) =>
+        return prev.map((item) =>
           item.sku === sku
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       } else {
-        // add new product to order
-        return [...prevOrder, { sku, name, quantity }];
+        return [...prev, { sku, name, quantity, price, imgSrc }];
       }
     });
   };
 
   console.log("Current Order:", order);
-
-  return (
+  const ItemsContainer = (
     <div className="orders-page">
       {data.products.map((item: any, index: number) => {
         const { name, sku, price, image } = item;
@@ -72,21 +78,18 @@ const MainPage = () => {
             name={name}
             price={`$${price}`}
             sku={sku}
-            onOrder={handleAddToOrder}
+            onOrder={(sku, name, quantity) =>
+              handleAddToOrder(sku, name, quantity, price, imgUrl)
+            }
           />
         );
       })}
-      {/* <div className="order-summary">
-        <h2>Current Order</h2>
-        {order.length === 0 && <p>No products yet.</p>}
-        <ul>
-          {order.map((item) => (
-            <li key={item.sku}>
-              {item.name} - {item.quantity}
-            </li>
-          ))}
-        </ul>
-      </div> */}
+    </div>
+  );
+  return (
+    <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+      {ItemsContainer}
+      <OrdersPage order={order} />
     </div>
   );
 };

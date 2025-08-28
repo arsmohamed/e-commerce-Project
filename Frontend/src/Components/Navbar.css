@@ -2,7 +2,9 @@
   width: 100%;
   background-color: black; /* Change this to any color you want */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Light white border */
-  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.822);
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .navbar-container {
@@ -11,6 +13,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .navbar-title {

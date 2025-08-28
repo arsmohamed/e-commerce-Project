@@ -13,9 +13,9 @@ const Navbar = () => {
           <Link to="/products" className="navbar-link">
             Product
           </Link>
-          <Link to="/orders" className="navbar-link">
+          {/* <Link to="/orders" className="navbar-link">
             Order
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>

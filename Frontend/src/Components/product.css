@@ -3,10 +3,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 300px;
+  width: 200px;
   height: auto;
   margin: 30px;
-  padding: 1.5rem;
+  padding: 15px;
   border-radius: 12px;
   background: #1a1a1a;
   color: #fff;
@@ -15,7 +15,7 @@
 
 .product-image {
   width: 100%;
-  height: 60%;
+  height: 250px;
   border-radius: 8px;
   object-fit: cover;
 }
