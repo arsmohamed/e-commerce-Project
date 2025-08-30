@@ -1,21 +1,9 @@
 :root {
   background-color: #000; /* black background */
-  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  /* line-height: 1.5;
-  font-weight: 400;
-  
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
-@import "aos/dist/aos.css";
+/* @import "aos/dist/aos.css"; */
 /* The following Tailwind directives require processing by Tailwind CSS via PostCSS or a compatible build tool. 
    Make sure your build setup includes Tailwind CSS. */
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
